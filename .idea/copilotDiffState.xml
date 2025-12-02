@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CopilotDiffPersistence">
+    <option name="pendingDiffs">
+      <map>
+        <entry key="$PROJECT_DIR$/src/test/java/org/calidadsoftware/questions/ActividadCompletada.java">
+          <value>
+            <PendingDiffInfo>
+              <option name="filePath" value="$PROJECT_DIR$/src/test/java/org/calidadsoftware/questions/ActividadCompletada.java" />
+              <option name="updatedContent" value="package org.calidadsoftware.questions;&#10;&#10;import net.serenitybdd.screenplay.Actor;&#10;import net.serenitybdd.screenplay.Question;&#10;import net.serenitybdd.screenplay.targets.Target;&#10;&#10;public class ActividadCompletada implements Question&lt;Boolean&gt; {&#10;&#10;    private final Target target;&#10;&#10;    public ActividadCompletada(Target target) {&#10;        this.target = target;&#10;    }&#10;&#10;    public static ActividadCompletada mostrado() {&#10;        return new ActividadCompletada(org.calidadsoftware.interfaces.ActivityPage.ACTIVITY_COMPLETED);&#10;    }&#10;&#10;    @Override&#10;    public Boolean answeredBy(Actor actor) {&#10;        try {&#10;            return target.resolveFor(actor).isVisible();&#10;        } catch (Exception e) {&#10;            return false;&#10;        }&#10;    }&#10;}&#10;" />
+            </PendingDiffInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
