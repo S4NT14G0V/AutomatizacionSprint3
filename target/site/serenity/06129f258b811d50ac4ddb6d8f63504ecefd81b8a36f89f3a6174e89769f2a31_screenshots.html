@@ -1,0 +1,387 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="13eaae71d382e86bd5df191e886dd28ec4b6f7cf73819821232b37d7c648d419.html">Gesti&oacute;n De Amigos</a></span>
+                > <span class="truncate-60"><a
+                    href="06129f258b811d50ac4ddb6d8f63504ecefd81b8a36f89f3a6174e89769f2a31.html">Aceptar solicitud de amistad </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 02-12-2025 02:40</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Gestión De Amigos </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                Como usuario autenticado<br />
+Quiero gestionar mis amigos<br />
+Para poder agregar o dejar de seguir a otros usuarios
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="c68fd6639ab29c4b0ac02a78bc39f4e22557bcaa40ef14c903ac0e584626edfe.html">1 To 2 Minutes
+                                        (Duration)
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="f55cf301e8f51d63aebeb8bc8dbe880df940586e2a502c7a3e24c2b639523f8f.html">Windows
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Aceptar solicitud de amistad
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given el usuario ha iniciado sesión<br>And está en la pantalla de amigos con alguna solicitud pendiente<br>When busca un usuario<br>And presiona el botón de "&lt;tipo_accion&gt;"<br>Then el usuario "&lt;resultado&gt;"</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="4437a9d67a449ef3c02f3a3d878a0f599ab6a3f13346804126331186ecba0d3e.png" title=" 1: Aceptar solicitud de amistad ({tipo_accion=aceptar, resultado=aparece en la lista de amigos})" width="0"/>
+                <img src="4437a9d67a449ef3c02f3a3d878a0f599ab6a3f13346804126331186ecba0d3e.png" title=" Given el usuario ha iniciado sesi&oacute;n" width="0"/>
+                <img src="4399f4def24ca49b139ef7b2d9a778be8416ab27ef00a0cfc72a9ca1d048c0c7.png" title=" Usuario-two wait for" width="0"/>
+                <img src="4399f4def24ca49b139ef7b2d9a778be8416ab27ef00a0cfc72a9ca1d048c0c7.png" title=" Usuario-two write on mobile" width="0"/>
+                <img src="c8f7ffe11446f1ba9873f15f0cbf391fae460e86c8c325612d6aea8763abdf16.png" title=" Usuario-two write on mobile (completed)" width="0"/>
+                <img src="c8f7ffe11446f1ba9873f15f0cbf391fae460e86c8c325612d6aea8763abdf16.png" title=" Usuario-two wait for" width="0"/>
+                <img src="c8f7ffe11446f1ba9873f15f0cbf391fae460e86c8c325612d6aea8763abdf16.png" title=" Usuario-two write on mobile" width="0"/>
+                <img src="1f48e26cf3b0125bf97846ce5a92abb1dae9f48f4d664430682ccc2d44e58da0.png" title=" Usuario-two write on mobile (completed)" width="0"/>
+                <img src="1f48e26cf3b0125bf97846ce5a92abb1dae9f48f4d664430682ccc2d44e58da0.png" title=" Usuario-two wait for" width="0"/>
+                <img src="1f48e26cf3b0125bf97846ce5a92abb1dae9f48f4d664430682ccc2d44e58da0.png" title=" Usuario-two click on" width="0"/>
+                <img src="1f48e26cf3b0125bf97846ce5a92abb1dae9f48f4d664430682ccc2d44e58da0.png" title=" usuario-two clicks on bot&oacute;n login" width="0"/>
+                <img src="09e86bd39eee3ca7ae1cc3969febbdb3eca5b0f6660f56aca0ebb194908612e0.png" title=" usuario-two clicks on bot&oacute;n login (completed)" width="0"/>
+                <img src="09e86bd39eee3ca7ae1cc3969febbdb3eca5b0f6660f56aca0ebb194908612e0.png" title=" Usuario-two click on (completed)" width="0"/>
+                <img src="09e86bd39eee3ca7ae1cc3969febbdb3eca5b0f6660f56aca0ebb194908612e0.png" title=" Usuario-two wait for" width="0"/>
+                <img src="c334349c00690a8ce1e451bc18c66d03ce8a98377775389145fda197879f4b58.png" title=" Usuario-two wait for (completed)" width="0"/>
+                <img src="c334349c00690a8ce1e451bc18c66d03ce8a98377775389145fda197879f4b58.png" title=" Given el usuario ha iniciado sesi&oacute;n (completed)" width="0"/>
+                <img src="c334349c00690a8ce1e451bc18c66d03ce8a98377775389145fda197879f4b58.png" title=" And est&aacute; en la pantalla de amigos con alguna solicitud pendiente" width="0"/>
+                <img src="5ec4bff7761a60f1cf807d378501b85af7d35ffb414c80c70c925918814ed471.png" title=" Usuario-two navegar friends aceptar" width="0"/>
+                <img src="f8887cd01443e1fe78d9d41a1928fc1b8facb3d08c1e0dd232f64d0c991b1e3a.png" title=" Usuario-two wait for" width="0"/>
+                <img src="06915955e0a047d82c4c5350906c6fcabb2b8abfbf669ef2304a0b5d0af9e8e4.png" title=" Usuario-two wait for (completed)" width="0"/>
+                <img src="06915955e0a047d82c4c5350906c6fcabb2b8abfbf669ef2304a0b5d0af9e8e4.png" title=" Usuario-two click on" width="0"/>
+                <img src="06915955e0a047d82c4c5350906c6fcabb2b8abfbf669ef2304a0b5d0af9e8e4.png" title=" usuario-two clicks on bot&oacute;n amigos" width="0"/>
+                <img src="06915955e0a047d82c4c5350906c6fcabb2b8abfbf669ef2304a0b5d0af9e8e4.png" title=" Usuario-two wait for" width="0"/>
+                <img src="06915955e0a047d82c4c5350906c6fcabb2b8abfbf669ef2304a0b5d0af9e8e4.png" title=" Usuario-two navegar friends aceptar (completed)" width="0"/>
+                <img src="06915955e0a047d82c4c5350906c6fcabb2b8abfbf669ef2304a0b5d0af9e8e4.png" title=" And est&aacute; en la pantalla de amigos con alguna solicitud pendiente (completed)" width="0"/>
+                <img src="06915955e0a047d82c4c5350906c6fcabb2b8abfbf669ef2304a0b5d0af9e8e4.png" title=" When busca un usuario" width="0"/>
+                <img src="06915955e0a047d82c4c5350906c6fcabb2b8abfbf669ef2304a0b5d0af9e8e4.png" title=" Usuario-two buscar usuario" width="0"/>
+                <img src="06915955e0a047d82c4c5350906c6fcabb2b8abfbf669ef2304a0b5d0af9e8e4.png" title=" Usuario-two wait for" width="0"/>
+                <img src="06915955e0a047d82c4c5350906c6fcabb2b8abfbf669ef2304a0b5d0af9e8e4.png" title=" Usuario-two click on" width="0"/>
+                <img src="06915955e0a047d82c4c5350906c6fcabb2b8abfbf669ef2304a0b5d0af9e8e4.png" title=" usuario-two clicks on bot&oacute;n para navegar a agregar amigos" width="0"/>
+                <img src="06915955e0a047d82c4c5350906c6fcabb2b8abfbf669ef2304a0b5d0af9e8e4.png" title=" Usuario-two wait for" width="0"/>
+                <img src="74ad3d397a1a3343902cbf6e1e279f32344684a48816fa441b16eae45c88413d.png" title=" Usuario-two wait for (completed)" width="0"/>
+                <img src="74ad3d397a1a3343902cbf6e1e279f32344684a48816fa441b16eae45c88413d.png" title=" Usuario-two enter text" width="0"/>
+                <img src="74ad3d397a1a3343902cbf6e1e279f32344684a48816fa441b16eae45c88413d.png" title=" usuario-two enters 'mike.dare@hotmail.com' into campo de b&uacute;squeda de usuarios" width="0"/>
+                <img src="948fd205131218473d01d9116f635b0d0bba4b6d6e51c49f1b1c14b718e6a8fd.png" title=" usuario-two enters 'mike.dare@hotmail.com' into campo de b&uacute;squeda de usuarios (completed)" width="0"/>
+                <img src="948fd205131218473d01d9116f635b0d0bba4b6d6e51c49f1b1c14b718e6a8fd.png" title=" Usuario-two enter text (completed)" width="0"/>
+                <img src="948fd205131218473d01d9116f635b0d0bba4b6d6e51c49f1b1c14b718e6a8fd.png" title=" Usuario-two wait for" width="0"/>
+                <img src="5fa6b16f76c01a638f91452e17471071122e5434dd51d70afdf9ca8eb5277769.png" title=" Usuario-two wait for (completed)" width="0"/>
+                <img src="5fa6b16f76c01a638f91452e17471071122e5434dd51d70afdf9ca8eb5277769.png" title=" Usuario-two click on" width="0"/>
+                <img src="5fa6b16f76c01a638f91452e17471071122e5434dd51d70afdf9ca8eb5277769.png" title=" usuario-two clicks on resultado de b&uacute;squeda de usuarios" width="0"/>
+                <img src="5fa6b16f76c01a638f91452e17471071122e5434dd51d70afdf9ca8eb5277769.png" title=" Usuario-two wait for" width="0"/>
+                <img src="5fa6b16f76c01a638f91452e17471071122e5434dd51d70afdf9ca8eb5277769.png" title=" Usuario-two buscar usuario (completed)" width="0"/>
+                <img src="5fa6b16f76c01a638f91452e17471071122e5434dd51d70afdf9ca8eb5277769.png" title=" When busca un usuario (completed)" width="0"/>
+                <img src="5fa6b16f76c01a638f91452e17471071122e5434dd51d70afdf9ca8eb5277769.png" title=" And presiona el bot&oacute;n de &quot;aceptar&quot;" width="0"/>
+                <img src="5fa6b16f76c01a638f91452e17471071122e5434dd51d70afdf9ca8eb5277769.png" title=" Usuario-two aceptar solicitud" width="0"/>
+                <img src="5fa6b16f76c01a638f91452e17471071122e5434dd51d70afdf9ca8eb5277769.png" title=" Usuario-two wait for" width="0"/>
+                <img src="5fa6b16f76c01a638f91452e17471071122e5434dd51d70afdf9ca8eb5277769.png" title=" Usuario-two click on" width="0"/>
+                <img src="5fa6b16f76c01a638f91452e17471071122e5434dd51d70afdf9ca8eb5277769.png" title=" usuario-two clicks on bot&oacute;n agregar amigo" width="0"/>
+                <img src="adcf22812564f9354dfd848caad3fbe23acb8c0b9f43479d4a3f11accf4a1390.png" title=" usuario-two clicks on bot&oacute;n agregar amigo (completed)" width="0"/>
+                <img src="adcf22812564f9354dfd848caad3fbe23acb8c0b9f43479d4a3f11accf4a1390.png" title=" Usuario-two click on (completed)" width="0"/>
+                <img src="adcf22812564f9354dfd848caad3fbe23acb8c0b9f43479d4a3f11accf4a1390.png" title=" Usuario-two wait for" width="0"/>
+                <img src="adcf22812564f9354dfd848caad3fbe23acb8c0b9f43479d4a3f11accf4a1390.png" title=" Usuario-two click on" width="0"/>
+                <img src="adcf22812564f9354dfd848caad3fbe23acb8c0b9f43479d4a3f11accf4a1390.png" title=" usuario-two clicks on bot&oacute;n OK del toast de aceptar solicitud" width="0"/>
+                <img src="00de153b567d0418a6acdbbb08295eb776166bd038c9f5f648244e246705b933.png" title=" usuario-two clicks on bot&oacute;n OK del toast de aceptar solicitud (completed)" width="0"/>
+                <img src="00de153b567d0418a6acdbbb08295eb776166bd038c9f5f648244e246705b933.png" title=" Usuario-two click on (completed)" width="0"/>
+                <img src="00de153b567d0418a6acdbbb08295eb776166bd038c9f5f648244e246705b933.png" title=" Usuario-two wait for" width="0"/>
+                <img src="f0a0bb8388eb6e84de57d8d81da786364df4e09465e5e01f2ad577a3e3694a62.png" title=" Usuario-two wait for (completed)" width="0"/>
+                <img src="f0a0bb8388eb6e84de57d8d81da786364df4e09465e5e01f2ad577a3e3694a62.png" title=" Usuario-two click on" width="0"/>
+                <img src="f0a0bb8388eb6e84de57d8d81da786364df4e09465e5e01f2ad577a3e3694a62.png" title=" usuario-two clicks on bot&oacute;n OK del toast de &eacute;xito al aceptar solicitud" width="0"/>
+                <img src="41d78eeadd543a5393e1eb13c9499997a67f9ab32444a9c7fa482e8fb62f8cc0.png" title=" usuario-two clicks on bot&oacute;n OK del toast de &eacute;xito al aceptar solicitud (completed)" width="0"/>
+                <img src="41d78eeadd543a5393e1eb13c9499997a67f9ab32444a9c7fa482e8fb62f8cc0.png" title=" Usuario-two click on (completed)" width="0"/>
+                <img src="41d78eeadd543a5393e1eb13c9499997a67f9ab32444a9c7fa482e8fb62f8cc0.png" title=" Usuario-two wait for" width="0"/>
+                <img src="c3c0172d90cfef6cd4d869a0b6844d297e4678c5187dece3b837ab0b32e73992.png" title=" Usuario-two wait for (completed)" width="0"/>
+                <img src="c3c0172d90cfef6cd4d869a0b6844d297e4678c5187dece3b837ab0b32e73992.png" title=" Usuario-two click on" width="0"/>
+                <img src="c3c0172d90cfef6cd4d869a0b6844d297e4678c5187dece3b837ab0b32e73992.png" title=" usuario-two clicks on bot&oacute;n para cerrar la b&uacute;squeda de usuarios" width="0"/>
+                <img src="c3c0172d90cfef6cd4d869a0b6844d297e4678c5187dece3b837ab0b32e73992.png" title=" Usuario-two wait for" width="0"/>
+                <img src="02a723fe981183463ec616ac6e3284dd275efbd0bdbb8a84001ab5949da3e148.png" title=" Usuario-two wait for (completed)" width="0"/>
+                <img src="02a723fe981183463ec616ac6e3284dd275efbd0bdbb8a84001ab5949da3e148.png" title=" Usuario-two aceptar solicitud (completed)" width="0"/>
+                <img src="02a723fe981183463ec616ac6e3284dd275efbd0bdbb8a84001ab5949da3e148.png" title=" And presiona el bot&oacute;n de &quot;aceptar&quot; (completed)" width="0"/>
+                <img src="02a723fe981183463ec616ac6e3284dd275efbd0bdbb8a84001ab5949da3e148.png" title=" Then el usuario &quot;aparece en la lista de amigos&quot;" width="0"/>
+                <img src="02a723fe981183463ec616ac6e3284dd275efbd0bdbb8a84001ab5949da3e148.png" title=" Then usuario en lista should be (true)" width="0"/>
+                <img src="02a723fe981183463ec616ac6e3284dd275efbd0bdbb8a84001ab5949da3e148.png" title=" 1: Aceptar solicitud de amistad ({tipo_accion=aceptar, resultado=aparece en la lista de amigos}) (completed)" width="0"/>
+                <img src="03fc61a2aed868932cb697f50350cc13bea83342191d94d5f43f1384dd2e5f38.png" title=" 2: Aceptar solicitud de amistad ({tipo_accion=rechazar, resultado=no aparece en la lista de amigos})" width="0"/>
+                <img src="03fc61a2aed868932cb697f50350cc13bea83342191d94d5f43f1384dd2e5f38.png" title=" Given el usuario ha iniciado sesi&oacute;n" width="0"/>
+                <img src="4399f4def24ca49b139ef7b2d9a778be8416ab27ef00a0cfc72a9ca1d048c0c7.png" title=" Usuario-two wait for" width="0"/>
+                <img src="4399f4def24ca49b139ef7b2d9a778be8416ab27ef00a0cfc72a9ca1d048c0c7.png" title=" Usuario-two write on mobile" width="0"/>
+                <img src="c8f7ffe11446f1ba9873f15f0cbf391fae460e86c8c325612d6aea8763abdf16.png" title=" Usuario-two write on mobile (completed)" width="0"/>
+                <img src="c8f7ffe11446f1ba9873f15f0cbf391fae460e86c8c325612d6aea8763abdf16.png" title=" Usuario-two wait for" width="0"/>
+                <img src="c8f7ffe11446f1ba9873f15f0cbf391fae460e86c8c325612d6aea8763abdf16.png" title=" Usuario-two write on mobile" width="0"/>
+                <img src="1f48e26cf3b0125bf97846ce5a92abb1dae9f48f4d664430682ccc2d44e58da0.png" title=" Usuario-two write on mobile (completed)" width="0"/>
+                <img src="1f48e26cf3b0125bf97846ce5a92abb1dae9f48f4d664430682ccc2d44e58da0.png" title=" Usuario-two wait for" width="0"/>
+                <img src="1f48e26cf3b0125bf97846ce5a92abb1dae9f48f4d664430682ccc2d44e58da0.png" title=" Usuario-two click on" width="0"/>
+                <img src="1f48e26cf3b0125bf97846ce5a92abb1dae9f48f4d664430682ccc2d44e58da0.png" title=" usuario-two clicks on bot&oacute;n login" width="0"/>
+                <img src="b20ba8abecf4d02d90408fac45b7431b9242502ff02a9943005b584a0f31392c.png" title=" usuario-two clicks on bot&oacute;n login (completed)" width="0"/>
+                <img src="b20ba8abecf4d02d90408fac45b7431b9242502ff02a9943005b584a0f31392c.png" title=" Usuario-two click on (completed)" width="0"/>
+                <img src="b20ba8abecf4d02d90408fac45b7431b9242502ff02a9943005b584a0f31392c.png" title=" Usuario-two wait for" width="0"/>
+                <img src="2753ea8ddf74d2117b282c16d9bd8702a1ff07171edb6bd602b95abcadddad27.png" title=" Usuario-two wait for (completed)" width="0"/>
+                <img src="2753ea8ddf74d2117b282c16d9bd8702a1ff07171edb6bd602b95abcadddad27.png" title=" Given el usuario ha iniciado sesi&oacute;n (completed)" width="0"/>
+                <img src="2753ea8ddf74d2117b282c16d9bd8702a1ff07171edb6bd602b95abcadddad27.png" title=" And est&aacute; en la pantalla de amigos con alguna solicitud pendiente" width="0"/>
+                <img src="dd15474e3a84cb0283e634ef04dd6eed4ad65f85937786966943e6f2417f66d6.png" title=" Usuario-two navegar friends aceptar" width="0"/>
+                <img src="c89b2c022a9c2edb15163075ee990068c9c75e4ad11296db667ea41996f6fc60.png" title=" Usuario-two wait for" width="0"/>
+                <img src="c89b2c022a9c2edb15163075ee990068c9c75e4ad11296db667ea41996f6fc60.png" title=" Usuario-two click on" width="0"/>
+                <img src="c89b2c022a9c2edb15163075ee990068c9c75e4ad11296db667ea41996f6fc60.png" title=" usuario-two clicks on bot&oacute;n amigos" width="0"/>
+                <img src="c89b2c022a9c2edb15163075ee990068c9c75e4ad11296db667ea41996f6fc60.png" title=" Usuario-two wait for" width="0"/>
+                <img src="c89b2c022a9c2edb15163075ee990068c9c75e4ad11296db667ea41996f6fc60.png" title=" Usuario-two navegar friends aceptar (completed)" width="0"/>
+                <img src="c89b2c022a9c2edb15163075ee990068c9c75e4ad11296db667ea41996f6fc60.png" title=" And est&aacute; en la pantalla de amigos con alguna solicitud pendiente (completed)" width="0"/>
+                <img src="c89b2c022a9c2edb15163075ee990068c9c75e4ad11296db667ea41996f6fc60.png" title=" When busca un usuario" width="0"/>
+                <img src="c89b2c022a9c2edb15163075ee990068c9c75e4ad11296db667ea41996f6fc60.png" title=" Usuario-two buscar usuario" width="0"/>
+                <img src="c89b2c022a9c2edb15163075ee990068c9c75e4ad11296db667ea41996f6fc60.png" title=" Usuario-two wait for" width="0"/>
+                <img src="20189aa4038cba51dc809e3cac6881e4c206fd72fd787a038520300f2a7cfa50.png" title=" Usuario-two wait for (completed)" width="0"/>
+                <img src="20189aa4038cba51dc809e3cac6881e4c206fd72fd787a038520300f2a7cfa50.png" title=" Usuario-two click on" width="0"/>
+                <img src="20189aa4038cba51dc809e3cac6881e4c206fd72fd787a038520300f2a7cfa50.png" title=" usuario-two clicks on bot&oacute;n para navegar a agregar amigos" width="0"/>
+                <img src="20189aa4038cba51dc809e3cac6881e4c206fd72fd787a038520300f2a7cfa50.png" title=" Usuario-two wait for" width="0"/>
+                <img src="5d38d4dbe41668cb5ae5a7e17c1ea62bf47c85bbc8517e79ce3071a4beae366f.png" title=" Usuario-two wait for (completed)" width="0"/>
+                <img src="5d38d4dbe41668cb5ae5a7e17c1ea62bf47c85bbc8517e79ce3071a4beae366f.png" title=" Usuario-two enter text" width="0"/>
+                <img src="5d38d4dbe41668cb5ae5a7e17c1ea62bf47c85bbc8517e79ce3071a4beae366f.png" title=" usuario-two enters 'desiree.durgan@gmail.com' into campo de b&uacute;squeda de usuarios" width="0"/>
+                <img src="13f54500377f64b4e87f1d09a59ec44c551558c6cb3cdfef33115e0c501bb099.png" title=" usuario-two enters 'desiree.durgan@gmail.com' into campo de b&uacute;squeda de usuarios (completed)" width="0"/>
+                <img src="13f54500377f64b4e87f1d09a59ec44c551558c6cb3cdfef33115e0c501bb099.png" title=" Usuario-two enter text (completed)" width="0"/>
+                <img src="13f54500377f64b4e87f1d09a59ec44c551558c6cb3cdfef33115e0c501bb099.png" title=" Usuario-two wait for" width="0"/>
+                <img src="d283271eb2f657566ea3bc8967830c91483b6bb225b907588e127b38823544b6.png" title=" Usuario-two wait for (completed)" width="0"/>
+                <img src="d283271eb2f657566ea3bc8967830c91483b6bb225b907588e127b38823544b6.png" title=" Usuario-two click on" width="0"/>
+                <img src="d283271eb2f657566ea3bc8967830c91483b6bb225b907588e127b38823544b6.png" title=" usuario-two clicks on resultado de b&uacute;squeda de usuarios" width="0"/>
+                <img src="d283271eb2f657566ea3bc8967830c91483b6bb225b907588e127b38823544b6.png" title=" Usuario-two wait for" width="0"/>
+                <img src="d283271eb2f657566ea3bc8967830c91483b6bb225b907588e127b38823544b6.png" title=" Usuario-two buscar usuario (completed)" width="0"/>
+                <img src="d283271eb2f657566ea3bc8967830c91483b6bb225b907588e127b38823544b6.png" title=" When busca un usuario (completed)" width="0"/>
+                <img src="d283271eb2f657566ea3bc8967830c91483b6bb225b907588e127b38823544b6.png" title=" And presiona el bot&oacute;n de &quot;rechazar&quot;" width="0"/>
+                <img src="d283271eb2f657566ea3bc8967830c91483b6bb225b907588e127b38823544b6.png" title=" Usuario-two rechazar solicitud" width="0"/>
+                <img src="d283271eb2f657566ea3bc8967830c91483b6bb225b907588e127b38823544b6.png" title=" Usuario-two wait for" width="0"/>
+                <img src="d283271eb2f657566ea3bc8967830c91483b6bb225b907588e127b38823544b6.png" title=" Usuario-two click on" width="0"/>
+                <img src="d283271eb2f657566ea3bc8967830c91483b6bb225b907588e127b38823544b6.png" title=" usuario-two clicks on bot&oacute;n rechazar amigo" width="0"/>
+                <img src="5dfb02c2a76c971f813a0c4994f78a0cae5d970aa0ec3d5a486e23dd491a40b9.png" title=" usuario-two clicks on bot&oacute;n rechazar amigo (completed)" width="0"/>
+                <img src="5dfb02c2a76c971f813a0c4994f78a0cae5d970aa0ec3d5a486e23dd491a40b9.png" title=" Usuario-two click on (completed)" width="0"/>
+                <img src="5dfb02c2a76c971f813a0c4994f78a0cae5d970aa0ec3d5a486e23dd491a40b9.png" title=" Usuario-two wait for" width="0"/>
+                <img src="5dfb02c2a76c971f813a0c4994f78a0cae5d970aa0ec3d5a486e23dd491a40b9.png" title=" Usuario-two click on" width="0"/>
+                <img src="5dfb02c2a76c971f813a0c4994f78a0cae5d970aa0ec3d5a486e23dd491a40b9.png" title=" usuario-two clicks on bot&oacute;n OK del toast de aceptar solicitud" width="0"/>
+                <img src="6d516cd1eb3ff9a53500841d1fc1d7828a57a46c17ef43a1dda336fd1566ab75.png" title=" usuario-two clicks on bot&oacute;n OK del toast de aceptar solicitud (completed)" width="0"/>
+                <img src="6d516cd1eb3ff9a53500841d1fc1d7828a57a46c17ef43a1dda336fd1566ab75.png" title=" Usuario-two click on (completed)" width="0"/>
+                <img src="6d516cd1eb3ff9a53500841d1fc1d7828a57a46c17ef43a1dda336fd1566ab75.png" title=" Usuario-two wait for" width="0"/>
+                <img src="19ef25697ff1ca0b5a2602d51d63afb32c1129f082411f9e31f67aa62bbdcb9f.png" title=" Usuario-two wait for (completed)" width="0"/>
+                <img src="19ef25697ff1ca0b5a2602d51d63afb32c1129f082411f9e31f67aa62bbdcb9f.png" title=" Usuario-two click on" width="0"/>
+                <img src="19ef25697ff1ca0b5a2602d51d63afb32c1129f082411f9e31f67aa62bbdcb9f.png" title=" usuario-two clicks on bot&oacute;n OK del toast de &eacute;xito al aceptar solicitud" width="0"/>
+                <img src="178cb63d3b135e02b70d98bf7852e0996f48d0de3aa1444721111206239030f2.png" title=" usuario-two clicks on bot&oacute;n OK del toast de &eacute;xito al aceptar solicitud (completed)" width="0"/>
+                <img src="178cb63d3b135e02b70d98bf7852e0996f48d0de3aa1444721111206239030f2.png" title=" Usuario-two click on (completed)" width="0"/>
+                <img src="178cb63d3b135e02b70d98bf7852e0996f48d0de3aa1444721111206239030f2.png" title=" Usuario-two wait for" width="0"/>
+                <img src="268b61199c25497da6fb4fca01f3eab23f9bc9a58210f7cdd1e9fe3a5f9f31b5.png" title=" Usuario-two wait for (completed)" width="0"/>
+                <img src="268b61199c25497da6fb4fca01f3eab23f9bc9a58210f7cdd1e9fe3a5f9f31b5.png" title=" Usuario-two click on" width="0"/>
+                <img src="268b61199c25497da6fb4fca01f3eab23f9bc9a58210f7cdd1e9fe3a5f9f31b5.png" title=" usuario-two clicks on bot&oacute;n para cerrar la b&uacute;squeda de usuarios" width="0"/>
+                <img src="f87f9f988803b98cba4c57f45de5e815bb5b435d43a77d3cf25053a533f8c8b4.png" title=" usuario-two clicks on bot&oacute;n para cerrar la b&uacute;squeda de usuarios (completed)" width="0"/>
+                <img src="f87f9f988803b98cba4c57f45de5e815bb5b435d43a77d3cf25053a533f8c8b4.png" title=" Usuario-two click on (completed)" width="0"/>
+                <img src="f87f9f988803b98cba4c57f45de5e815bb5b435d43a77d3cf25053a533f8c8b4.png" title=" Usuario-two wait for" width="0"/>
+                <img src="74eb272a6a64d1f0c11693f1fe7edfe61057cc3158688cf2796c98ac24d03c77.png" title=" Usuario-two wait for (completed)" width="0"/>
+                <img src="74eb272a6a64d1f0c11693f1fe7edfe61057cc3158688cf2796c98ac24d03c77.png" title=" Usuario-two rechazar solicitud (completed)" width="0"/>
+                <img src="74eb272a6a64d1f0c11693f1fe7edfe61057cc3158688cf2796c98ac24d03c77.png" title=" And presiona el bot&oacute;n de &quot;rechazar&quot; (completed)" width="0"/>
+                <img src="74eb272a6a64d1f0c11693f1fe7edfe61057cc3158688cf2796c98ac24d03c77.png" title=" Then el usuario &quot;no aparece en la lista de amigos&quot;" width="0"/>
+                <img src="74eb272a6a64d1f0c11693f1fe7edfe61057cc3158688cf2796c98ac24d03c77.png" title=" Then usuario en lista should be (false)" width="0"/>
+                <img src="74eb272a6a64d1f0c11693f1fe7edfe61057cc3158688cf2796c98ac24d03c77.png" title=" 2: Aceptar solicitud de amistad ({tipo_accion=rechazar, resultado=no aparece en la lista de amigos}) (completed): <span class='success-color'>SUCCESS</span>" width="0"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.9.8</span>
+</div>
+</body>
+</html>

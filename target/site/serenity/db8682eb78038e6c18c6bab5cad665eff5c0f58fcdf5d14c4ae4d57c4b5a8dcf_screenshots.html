@@ -1,0 +1,399 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="a407d6dcdc8ba4f1309cba2a744934ea555b564c2b88e3b5b5024857a9a1dc9a.html">Actualizaci&oacute;n De Perfil De Usuario</a></span>
+                > <span class="truncate-60"><a
+                    href="db8682eb78038e6c18c6bab5cad665eff5c0f58fcdf5d14c4ae4d57c4b5a8dcf.html">Fallo en la actualizaci&oacute;n por datos inv&aacute;lidos </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 02-12-2025 02:35</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Actualización De Perfil De Usuario </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                Como usuario autenticado<br />
+Quiero actualizar la información de mi perfil<br />
+Para mantener mis datos personales correctos y actualizados
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="c68fd6639ab29c4b0ac02a78bc39f4e22557bcaa40ef14c903ac0e584626edfe.html">1 To 2 Minutes
+                                        (Duration)
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="f55cf301e8f51d63aebeb8bc8dbe880df940586e2a502c7a3e24c2b639523f8f.html">Windows
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Fallo en la actualizaci&oacute;n por datos inv&aacute;lidos
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given el usuario ha iniciado sesión<br>And está en la pantalla de edición de perfil<br>When modifica su nombre de usuario a "&lt;username&gt;" y su nombre completo a "&lt;fullname&gt;"<br>Then se muestra el mensaje de error</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="2a12dde8e6a0e3f1f5e931db8e78f9d6e13382535f16177c8b95c106547f4814.png" title=" 1: Fallo en la actualizaci&oacute;n por datos inv&aacute;lidos ({username=santiago, fullname=Juan Perez})" width="0"/>
+                <img src="2a12dde8e6a0e3f1f5e931db8e78f9d6e13382535f16177c8b95c106547f4814.png" title=" Given el usuario ha iniciado sesi&oacute;n" width="0"/>
+                <img src="4399f4def24ca49b139ef7b2d9a778be8416ab27ef00a0cfc72a9ca1d048c0c7.png" title=" Usuario-two wait for" width="0"/>
+                <img src="4399f4def24ca49b139ef7b2d9a778be8416ab27ef00a0cfc72a9ca1d048c0c7.png" title=" Usuario-two write on mobile" width="0"/>
+                <img src="c8f7ffe11446f1ba9873f15f0cbf391fae460e86c8c325612d6aea8763abdf16.png" title=" Usuario-two write on mobile (completed)" width="0"/>
+                <img src="c8f7ffe11446f1ba9873f15f0cbf391fae460e86c8c325612d6aea8763abdf16.png" title=" Usuario-two wait for" width="0"/>
+                <img src="c8f7ffe11446f1ba9873f15f0cbf391fae460e86c8c325612d6aea8763abdf16.png" title=" Usuario-two write on mobile" width="0"/>
+                <img src="1f48e26cf3b0125bf97846ce5a92abb1dae9f48f4d664430682ccc2d44e58da0.png" title=" Usuario-two write on mobile (completed)" width="0"/>
+                <img src="1f48e26cf3b0125bf97846ce5a92abb1dae9f48f4d664430682ccc2d44e58da0.png" title=" Usuario-two wait for" width="0"/>
+                <img src="1f48e26cf3b0125bf97846ce5a92abb1dae9f48f4d664430682ccc2d44e58da0.png" title=" Usuario-two click on" width="0"/>
+                <img src="1f48e26cf3b0125bf97846ce5a92abb1dae9f48f4d664430682ccc2d44e58da0.png" title=" usuario-two clicks on bot&oacute;n login" width="0"/>
+                <img src="94879bce2e2e26b968a9982e9bdb7ff34e3ca7ce7246bd19c1978bbd45b57dfe.png" title=" usuario-two clicks on bot&oacute;n login (completed)" width="0"/>
+                <img src="94879bce2e2e26b968a9982e9bdb7ff34e3ca7ce7246bd19c1978bbd45b57dfe.png" title=" Usuario-two click on (completed)" width="0"/>
+                <img src="94879bce2e2e26b968a9982e9bdb7ff34e3ca7ce7246bd19c1978bbd45b57dfe.png" title=" Usuario-two wait for" width="0"/>
+                <img src="a9c343f89c887426488fe7c001322c79ae36cd1c1ec00f0d9d6ff1d959d0838d.png" title=" Usuario-two wait for (completed)" width="0"/>
+                <img src="a9c343f89c887426488fe7c001322c79ae36cd1c1ec00f0d9d6ff1d959d0838d.png" title=" Given el usuario ha iniciado sesi&oacute;n (completed)" width="0"/>
+                <img src="a9c343f89c887426488fe7c001322c79ae36cd1c1ec00f0d9d6ff1d959d0838d.png" title=" And est&aacute; en la pantalla de edici&oacute;n de perfil" width="0"/>
+                <img src="d8e29cea614bde7ef6a4817e0fbf411ae15c02fb27ddd6a8d455301167ddb62e.png" title=" Usuario-two navegar profile" width="0"/>
+                <img src="d8e29cea614bde7ef6a4817e0fbf411ae15c02fb27ddd6a8d455301167ddb62e.png" title=" Usuario-two wait for" width="0"/>
+                <img src="d8e29cea614bde7ef6a4817e0fbf411ae15c02fb27ddd6a8d455301167ddb62e.png" title=" Usuario-two click on" width="0"/>
+                <img src="d8e29cea614bde7ef6a4817e0fbf411ae15c02fb27ddd6a8d455301167ddb62e.png" title=" usuario-two clicks on bot&oacute;n perfil" width="0"/>
+                <img src="d8e29cea614bde7ef6a4817e0fbf411ae15c02fb27ddd6a8d455301167ddb62e.png" title=" Usuario-two wait for" width="0"/>
+                <img src="00cc1c97230974734e150a791060523da54947064cb71845701b38bc8f11ca65.png" title=" Usuario-two wait for (completed)" width="0"/>
+                <img src="00cc1c97230974734e150a791060523da54947064cb71845701b38bc8f11ca65.png" title=" Usuario-two click on" width="0"/>
+                <img src="00cc1c97230974734e150a791060523da54947064cb71845701b38bc8f11ca65.png" title=" usuario-two clicks on bot&oacute;n editar perfil" width="0"/>
+                <img src="00cc1c97230974734e150a791060523da54947064cb71845701b38bc8f11ca65.png" title=" Usuario-two wait for" width="0"/>
+                <img src="41a7893a78c6973911e47acbe638501e19eb14f351466dbf2c0e8b61c6b45e75.png" title=" Usuario-two wait for (completed)" width="0"/>
+                <img src="41a7893a78c6973911e47acbe638501e19eb14f351466dbf2c0e8b61c6b45e75.png" title=" Usuario-two navegar profile (completed)" width="0"/>
+                <img src="41a7893a78c6973911e47acbe638501e19eb14f351466dbf2c0e8b61c6b45e75.png" title=" And est&aacute; en la pantalla de edici&oacute;n de perfil (completed)" width="0"/>
+                <img src="41a7893a78c6973911e47acbe638501e19eb14f351466dbf2c0e8b61c6b45e75.png" title=" When modifica su nombre de usuario a &quot;santiago&quot; y su nombre completo a &quot;Juan Perez&quot;" width="0"/>
+                <img src="41a7893a78c6973911e47acbe638501e19eb14f351466dbf2c0e8b61c6b45e75.png" title=" Usuario-two editar perfil" width="0"/>
+                <img src="41a7893a78c6973911e47acbe638501e19eb14f351466dbf2c0e8b61c6b45e75.png" title=" Usuario-two wait for" width="0"/>
+                <img src="41a7893a78c6973911e47acbe638501e19eb14f351466dbf2c0e8b61c6b45e75.png" title=" Usuario-two write on mobile" width="0"/>
+                <img src="fa8ea1e3f30b94b052fdd689d7c1767c4c220b6af79c7c7c91468a5a3b82defc.png" title=" Usuario-two write on mobile (completed)" width="0"/>
+                <img src="fa8ea1e3f30b94b052fdd689d7c1767c4c220b6af79c7c7c91468a5a3b82defc.png" title=" Usuario-two wait for" width="0"/>
+                <img src="fa8ea1e3f30b94b052fdd689d7c1767c4c220b6af79c7c7c91468a5a3b82defc.png" title=" Usuario-two write on mobile" width="0"/>
+                <img src="dad0a64f98993e4ab651a24ff1002940c8c7df07ba38ef51d8be3f3e6f752d57.png" title=" Usuario-two write on mobile (completed)" width="0"/>
+                <img src="dad0a64f98993e4ab651a24ff1002940c8c7df07ba38ef51d8be3f3e6f752d57.png" title=" Usuario-two wait for" width="0"/>
+                <img src="dad0a64f98993e4ab651a24ff1002940c8c7df07ba38ef51d8be3f3e6f752d57.png" title=" Usuario-two write on mobile" width="0"/>
+                <img src="3401c20752fd317ab8d4a20db77c8a12005e10045529bb03cb7af6d113463980.png" title=" Usuario-two write on mobile (completed)" width="0"/>
+                <img src="3401c20752fd317ab8d4a20db77c8a12005e10045529bb03cb7af6d113463980.png" title=" Usuario-two wait for" width="0"/>
+                <img src="3401c20752fd317ab8d4a20db77c8a12005e10045529bb03cb7af6d113463980.png" title=" Usuario-two write on mobile" width="0"/>
+                <img src="d777b602655e80343b808cbb76907450b429f37f3bd10911d81246401ae7c274.png" title=" Usuario-two write on mobile (completed)" width="0"/>
+                <img src="d777b602655e80343b808cbb76907450b429f37f3bd10911d81246401ae7c274.png" title=" Usuario-two wait for" width="0"/>
+                <img src="d777b602655e80343b808cbb76907450b429f37f3bd10911d81246401ae7c274.png" title=" usuario-two clicks on bot&oacute;n guardar" width="0"/>
+                <img src="2ff8e2ae1368145d3ec38499303599a1c619a8a5345a91579fa6c5b423b5789f.png" title=" usuario-two clicks on bot&oacute;n guardar (completed)" width="0"/>
+                <img src="2ff8e2ae1368145d3ec38499303599a1c619a8a5345a91579fa6c5b423b5789f.png" title=" Usuario-two editar perfil (completed)" width="0"/>
+                <img src="2ff8e2ae1368145d3ec38499303599a1c619a8a5345a91579fa6c5b423b5789f.png" title=" When modifica su nombre de usuario a &quot;santiago&quot; y su nombre completo a &quot;Juan Perez&quot; (completed)" width="0"/>
+                <img src="2ff8e2ae1368145d3ec38499303599a1c619a8a5345a91579fa6c5b423b5789f.png" title=" Then se muestra el mensaje de error" width="0"/>
+                <img src="5086a1f85f99f2b5e846632e40b0165ebc42f88bb81e8b405b50a125d6e358db.png" title=" Then error profile visible should be (true)" width="0"/>
+                <img src="5086a1f85f99f2b5e846632e40b0165ebc42f88bb81e8b405b50a125d6e358db.png" title=" Then se muestra el mensaje de error (completed)" width="0"/>
+                <img src="5086a1f85f99f2b5e846632e40b0165ebc42f88bb81e8b405b50a125d6e358db.png" title=" 1: Fallo en la actualizaci&oacute;n por datos inv&aacute;lidos ({username=santiago, fullname=Juan Perez}) (completed)" width="0"/>
+                <img src="79a8b79d279765815137313b4742a08512175e8f83bf9ff634b93b16a00b387c.png" title=" 2: Fallo en la actualizaci&oacute;n por datos inv&aacute;lidos ({username=, fullname=Juan Perez})" width="0"/>
+                <img src="79a8b79d279765815137313b4742a08512175e8f83bf9ff634b93b16a00b387c.png" title=" Given el usuario ha iniciado sesi&oacute;n" width="0"/>
+                <img src="4399f4def24ca49b139ef7b2d9a778be8416ab27ef00a0cfc72a9ca1d048c0c7.png" title=" Usuario-two wait for" width="0"/>
+                <img src="4399f4def24ca49b139ef7b2d9a778be8416ab27ef00a0cfc72a9ca1d048c0c7.png" title=" Usuario-two write on mobile" width="0"/>
+                <img src="c8f7ffe11446f1ba9873f15f0cbf391fae460e86c8c325612d6aea8763abdf16.png" title=" Usuario-two write on mobile (completed)" width="0"/>
+                <img src="c8f7ffe11446f1ba9873f15f0cbf391fae460e86c8c325612d6aea8763abdf16.png" title=" Usuario-two wait for" width="0"/>
+                <img src="c8f7ffe11446f1ba9873f15f0cbf391fae460e86c8c325612d6aea8763abdf16.png" title=" Usuario-two write on mobile" width="0"/>
+                <img src="1f48e26cf3b0125bf97846ce5a92abb1dae9f48f4d664430682ccc2d44e58da0.png" title=" Usuario-two write on mobile (completed)" width="0"/>
+                <img src="1f48e26cf3b0125bf97846ce5a92abb1dae9f48f4d664430682ccc2d44e58da0.png" title=" Usuario-two wait for" width="0"/>
+                <img src="1f48e26cf3b0125bf97846ce5a92abb1dae9f48f4d664430682ccc2d44e58da0.png" title=" Usuario-two click on" width="0"/>
+                <img src="1f48e26cf3b0125bf97846ce5a92abb1dae9f48f4d664430682ccc2d44e58da0.png" title=" usuario-two clicks on bot&oacute;n login" width="0"/>
+                <img src="2dad8e87fe51ae6a7bf29d4865078eda695d755c20e1361a74a70f1d7272d387.png" title=" usuario-two clicks on bot&oacute;n login (completed)" width="0"/>
+                <img src="2dad8e87fe51ae6a7bf29d4865078eda695d755c20e1361a74a70f1d7272d387.png" title=" Usuario-two click on (completed)" width="0"/>
+                <img src="2dad8e87fe51ae6a7bf29d4865078eda695d755c20e1361a74a70f1d7272d387.png" title=" Usuario-two wait for" width="0"/>
+                <img src="c334349c00690a8ce1e451bc18c66d03ce8a98377775389145fda197879f4b58.png" title=" Usuario-two wait for (completed)" width="0"/>
+                <img src="c334349c00690a8ce1e451bc18c66d03ce8a98377775389145fda197879f4b58.png" title=" Given el usuario ha iniciado sesi&oacute;n (completed)" width="0"/>
+                <img src="c334349c00690a8ce1e451bc18c66d03ce8a98377775389145fda197879f4b58.png" title=" And est&aacute; en la pantalla de edici&oacute;n de perfil" width="0"/>
+                <img src="f060b5f68552b31c041bc1e2d1cac8aeea3f8a7a4bcf63a37eec8708ff3f0942.png" title=" Usuario-two navegar profile" width="0"/>
+                <img src="92867d8c6e4762a79bb503ba08e8c3d3edd34e6a8455bd6feee1356197d98de8.png" title=" Usuario-two wait for" width="0"/>
+                <img src="8f1487967e4a309f56594d1760fd828c39e7e5e0c2be9ada7fa19bcb8e56c6b5.png" title=" Usuario-two wait for (completed)" width="0"/>
+                <img src="8f1487967e4a309f56594d1760fd828c39e7e5e0c2be9ada7fa19bcb8e56c6b5.png" title=" Usuario-two click on" width="0"/>
+                <img src="586dd8cd5fa650285dc006f988b8f7f6f96083143cfeda16351b16b18382f398.png" title=" usuario-two clicks on bot&oacute;n perfil" width="0"/>
+                <img src="92e96656dbdf9e904639900dd8399ee2804f209b4f97d5d4443008b93d6fa936.png" title=" usuario-two clicks on bot&oacute;n perfil (completed)" width="0"/>
+                <img src="92e96656dbdf9e904639900dd8399ee2804f209b4f97d5d4443008b93d6fa936.png" title=" Usuario-two click on (completed)" width="0"/>
+                <img src="92e96656dbdf9e904639900dd8399ee2804f209b4f97d5d4443008b93d6fa936.png" title=" Usuario-two wait for" width="0"/>
+                <img src="18788314747b7227d198f336f2886589efba9ba632f4164f69bda762848e94f3.png" title=" Usuario-two wait for (completed)" width="0"/>
+                <img src="18788314747b7227d198f336f2886589efba9ba632f4164f69bda762848e94f3.png" title=" Usuario-two click on" width="0"/>
+                <img src="18788314747b7227d198f336f2886589efba9ba632f4164f69bda762848e94f3.png" title=" usuario-two clicks on bot&oacute;n editar perfil" width="0"/>
+                <img src="18788314747b7227d198f336f2886589efba9ba632f4164f69bda762848e94f3.png" title=" Usuario-two wait for" width="0"/>
+                <img src="d784ea8ea5cb00683f0c6f552e4cb30ef1de0281f168e29240f3d87d5116e0c3.png" title=" Usuario-two wait for (completed)" width="0"/>
+                <img src="d784ea8ea5cb00683f0c6f552e4cb30ef1de0281f168e29240f3d87d5116e0c3.png" title=" Usuario-two navegar profile (completed)" width="0"/>
+                <img src="d784ea8ea5cb00683f0c6f552e4cb30ef1de0281f168e29240f3d87d5116e0c3.png" title=" And est&aacute; en la pantalla de edici&oacute;n de perfil (completed)" width="0"/>
+                <img src="d784ea8ea5cb00683f0c6f552e4cb30ef1de0281f168e29240f3d87d5116e0c3.png" title=" When modifica su nombre de usuario a &quot;&quot; y su nombre completo a &quot;Juan Perez&quot;" width="0"/>
+                <img src="d784ea8ea5cb00683f0c6f552e4cb30ef1de0281f168e29240f3d87d5116e0c3.png" title=" Usuario-two editar perfil" width="0"/>
+                <img src="d784ea8ea5cb00683f0c6f552e4cb30ef1de0281f168e29240f3d87d5116e0c3.png" title=" Usuario-two wait for" width="0"/>
+                <img src="d784ea8ea5cb00683f0c6f552e4cb30ef1de0281f168e29240f3d87d5116e0c3.png" title=" Usuario-two write on mobile" width="0"/>
+                <img src="aa86b1f593e71997671a4bac5e881164bb9ff1175eaf7f70ec4e1606ee96dc02.png" title=" Usuario-two write on mobile (completed)" width="0"/>
+                <img src="aa86b1f593e71997671a4bac5e881164bb9ff1175eaf7f70ec4e1606ee96dc02.png" title=" Usuario-two wait for" width="0"/>
+                <img src="aa86b1f593e71997671a4bac5e881164bb9ff1175eaf7f70ec4e1606ee96dc02.png" title=" Usuario-two write on mobile" width="0"/>
+                <img src="aa86b1f593e71997671a4bac5e881164bb9ff1175eaf7f70ec4e1606ee96dc02.png" title=" Usuario-two wait for" width="0"/>
+                <img src="aa86b1f593e71997671a4bac5e881164bb9ff1175eaf7f70ec4e1606ee96dc02.png" title=" Usuario-two write on mobile" width="0"/>
+                <img src="40b645d83aea746ea53d3c053ae6176f6bae1f195c138cac38c4df20f2865c69.png" title=" Usuario-two write on mobile (completed)" width="0"/>
+                <img src="40b645d83aea746ea53d3c053ae6176f6bae1f195c138cac38c4df20f2865c69.png" title=" Usuario-two wait for" width="0"/>
+                <img src="40b645d83aea746ea53d3c053ae6176f6bae1f195c138cac38c4df20f2865c69.png" title=" Usuario-two write on mobile" width="0"/>
+                <img src="aa86b1f593e71997671a4bac5e881164bb9ff1175eaf7f70ec4e1606ee96dc02.png" title=" Usuario-two write on mobile (completed)" width="0"/>
+                <img src="aa86b1f593e71997671a4bac5e881164bb9ff1175eaf7f70ec4e1606ee96dc02.png" title=" Usuario-two wait for" width="0"/>
+                <img src="aa86b1f593e71997671a4bac5e881164bb9ff1175eaf7f70ec4e1606ee96dc02.png" title=" usuario-two clicks on bot&oacute;n guardar" width="0"/>
+                <img src="0db0b1418f1992f358bbc9100159212004dde53a50e2ead5e6d176d375724f8c.png" title=" usuario-two clicks on bot&oacute;n guardar (completed)" width="0"/>
+                <img src="0db0b1418f1992f358bbc9100159212004dde53a50e2ead5e6d176d375724f8c.png" title=" Usuario-two editar perfil (completed)" width="0"/>
+                <img src="0db0b1418f1992f358bbc9100159212004dde53a50e2ead5e6d176d375724f8c.png" title=" When modifica su nombre de usuario a &quot;&quot; y su nombre completo a &quot;Juan Perez&quot; (completed)" width="0"/>
+                <img src="0db0b1418f1992f358bbc9100159212004dde53a50e2ead5e6d176d375724f8c.png" title=" Then se muestra el mensaje de error" width="0"/>
+                <img src="0db0b1418f1992f358bbc9100159212004dde53a50e2ead5e6d176d375724f8c.png" title=" Then error profile visible should be (true)" width="0"/>
+                <img src="0db0b1418f1992f358bbc9100159212004dde53a50e2ead5e6d176d375724f8c.png" title=" 2: Fallo en la actualizaci&oacute;n por datos inv&aacute;lidos ({username=, fullname=Juan Perez}) (completed)" width="0"/>
+                <img src="b89eaa7907af958fc6ff796645705fc68e49a2c5217c4b00017f2e0be2b730ed.png" title=" 3: Fallo en la actualizaci&oacute;n por datos inv&aacute;lidos ({username=teste1, fullname=})" width="0"/>
+                <img src="b89eaa7907af958fc6ff796645705fc68e49a2c5217c4b00017f2e0be2b730ed.png" title=" Given el usuario ha iniciado sesi&oacute;n" width="0"/>
+                <img src="4399f4def24ca49b139ef7b2d9a778be8416ab27ef00a0cfc72a9ca1d048c0c7.png" title=" Usuario-two wait for" width="0"/>
+                <img src="4399f4def24ca49b139ef7b2d9a778be8416ab27ef00a0cfc72a9ca1d048c0c7.png" title=" Usuario-two write on mobile" width="0"/>
+                <img src="c8f7ffe11446f1ba9873f15f0cbf391fae460e86c8c325612d6aea8763abdf16.png" title=" Usuario-two write on mobile (completed)" width="0"/>
+                <img src="c8f7ffe11446f1ba9873f15f0cbf391fae460e86c8c325612d6aea8763abdf16.png" title=" Usuario-two wait for" width="0"/>
+                <img src="c8f7ffe11446f1ba9873f15f0cbf391fae460e86c8c325612d6aea8763abdf16.png" title=" Usuario-two write on mobile" width="0"/>
+                <img src="1f48e26cf3b0125bf97846ce5a92abb1dae9f48f4d664430682ccc2d44e58da0.png" title=" Usuario-two write on mobile (completed)" width="0"/>
+                <img src="1f48e26cf3b0125bf97846ce5a92abb1dae9f48f4d664430682ccc2d44e58da0.png" title=" Usuario-two wait for" width="0"/>
+                <img src="1f48e26cf3b0125bf97846ce5a92abb1dae9f48f4d664430682ccc2d44e58da0.png" title=" Usuario-two click on" width="0"/>
+                <img src="1f48e26cf3b0125bf97846ce5a92abb1dae9f48f4d664430682ccc2d44e58da0.png" title=" usuario-two clicks on bot&oacute;n login" width="0"/>
+                <img src="9bf15e5f8eeed7ac6944121e79ffbfc4735d4b4255bcdf7d58d6b89e7c495b6f.png" title=" usuario-two clicks on bot&oacute;n login (completed)" width="0"/>
+                <img src="9bf15e5f8eeed7ac6944121e79ffbfc4735d4b4255bcdf7d58d6b89e7c495b6f.png" title=" Usuario-two click on (completed)" width="0"/>
+                <img src="9bf15e5f8eeed7ac6944121e79ffbfc4735d4b4255bcdf7d58d6b89e7c495b6f.png" title=" Usuario-two wait for" width="0"/>
+                <img src="46a169688d92a48121701fdd7a8b2c235f2c6b421f51c952b83fab4f37a49c07.png" title=" Usuario-two wait for (completed)" width="0"/>
+                <img src="46a169688d92a48121701fdd7a8b2c235f2c6b421f51c952b83fab4f37a49c07.png" title=" Given el usuario ha iniciado sesi&oacute;n (completed)" width="0"/>
+                <img src="46a169688d92a48121701fdd7a8b2c235f2c6b421f51c952b83fab4f37a49c07.png" title=" And est&aacute; en la pantalla de edici&oacute;n de perfil" width="0"/>
+                <img src="5ec4bff7761a60f1cf807d378501b85af7d35ffb414c80c70c925918814ed471.png" title=" Usuario-two navegar profile" width="0"/>
+                <img src="3279009e05a86282253869afe69c1b5e0dd26691a729dfd4b2f39cf73ab79190.png" title=" Usuario-two wait for" width="0"/>
+                <img src="5c4a2083cd5ef3f6ccc5397021a4dd65991b20c42d6a9b1d8747d49319f7767e.png" title=" Usuario-two wait for (completed)" width="0"/>
+                <img src="5c4a2083cd5ef3f6ccc5397021a4dd65991b20c42d6a9b1d8747d49319f7767e.png" title=" Usuario-two click on" width="0"/>
+                <img src="5c4a2083cd5ef3f6ccc5397021a4dd65991b20c42d6a9b1d8747d49319f7767e.png" title=" usuario-two clicks on bot&oacute;n perfil" width="0"/>
+                <img src="5c4a2083cd5ef3f6ccc5397021a4dd65991b20c42d6a9b1d8747d49319f7767e.png" title=" Usuario-two wait for" width="0"/>
+                <img src="336c8c44f3c639ca2c6bef47af1a68f9cd6fb021d61e18b4d521b19bceed01ee.png" title=" Usuario-two wait for (completed)" width="0"/>
+                <img src="336c8c44f3c639ca2c6bef47af1a68f9cd6fb021d61e18b4d521b19bceed01ee.png" title=" Usuario-two click on" width="0"/>
+                <img src="336c8c44f3c639ca2c6bef47af1a68f9cd6fb021d61e18b4d521b19bceed01ee.png" title=" usuario-two clicks on bot&oacute;n editar perfil" width="0"/>
+                <img src="336c8c44f3c639ca2c6bef47af1a68f9cd6fb021d61e18b4d521b19bceed01ee.png" title=" Usuario-two wait for" width="0"/>
+                <img src="f2234d164fb327004f2ccd8fb79c49f6db9662d79eabb80155c3f3cd518f7848.png" title=" Usuario-two wait for (completed)" width="0"/>
+                <img src="f2234d164fb327004f2ccd8fb79c49f6db9662d79eabb80155c3f3cd518f7848.png" title=" Usuario-two navegar profile (completed)" width="0"/>
+                <img src="f2234d164fb327004f2ccd8fb79c49f6db9662d79eabb80155c3f3cd518f7848.png" title=" And est&aacute; en la pantalla de edici&oacute;n de perfil (completed)" width="0"/>
+                <img src="f2234d164fb327004f2ccd8fb79c49f6db9662d79eabb80155c3f3cd518f7848.png" title=" When modifica su nombre de usuario a &quot;teste1&quot; y su nombre completo a &quot;&quot;" width="0"/>
+                <img src="f2234d164fb327004f2ccd8fb79c49f6db9662d79eabb80155c3f3cd518f7848.png" title=" Usuario-two editar perfil" width="0"/>
+                <img src="f2234d164fb327004f2ccd8fb79c49f6db9662d79eabb80155c3f3cd518f7848.png" title=" Usuario-two wait for" width="0"/>
+                <img src="f2234d164fb327004f2ccd8fb79c49f6db9662d79eabb80155c3f3cd518f7848.png" title=" Usuario-two write on mobile" width="0"/>
+                <img src="bd323d3289fea3785b857f468b61528fd35066f441f517cc904fd44e6331711b.png" title=" Usuario-two write on mobile (completed)" width="0"/>
+                <img src="bd323d3289fea3785b857f468b61528fd35066f441f517cc904fd44e6331711b.png" title=" Usuario-two wait for" width="0"/>
+                <img src="bd323d3289fea3785b857f468b61528fd35066f441f517cc904fd44e6331711b.png" title=" Usuario-two write on mobile" width="0"/>
+                <img src="88011c53b8dddef06aa4bc325e6f12f00b78c24cbd2d547901cf20ea8931d58f.png" title=" Usuario-two write on mobile (completed)" width="0"/>
+                <img src="88011c53b8dddef06aa4bc325e6f12f00b78c24cbd2d547901cf20ea8931d58f.png" title=" Usuario-two wait for" width="0"/>
+                <img src="88011c53b8dddef06aa4bc325e6f12f00b78c24cbd2d547901cf20ea8931d58f.png" title=" Usuario-two write on mobile" width="0"/>
+                <img src="631690fb2ab7e8e173e05dc69d6308381a53133620fee8260d5a408303c9627d.png" title=" Usuario-two write on mobile (completed)" width="0"/>
+                <img src="631690fb2ab7e8e173e05dc69d6308381a53133620fee8260d5a408303c9627d.png" title=" Usuario-two wait for" width="0"/>
+                <img src="631690fb2ab7e8e173e05dc69d6308381a53133620fee8260d5a408303c9627d.png" title=" Usuario-two write on mobile" width="0"/>
+                <img src="631690fb2ab7e8e173e05dc69d6308381a53133620fee8260d5a408303c9627d.png" title=" Usuario-two wait for" width="0"/>
+                <img src="631690fb2ab7e8e173e05dc69d6308381a53133620fee8260d5a408303c9627d.png" title=" usuario-two clicks on bot&oacute;n guardar" width="0"/>
+                <img src="30faed6d1816fed316fadbe094537e817003d4937d0afc44894d9aa74447cf77.png" title=" usuario-two clicks on bot&oacute;n guardar (completed)" width="0"/>
+                <img src="30faed6d1816fed316fadbe094537e817003d4937d0afc44894d9aa74447cf77.png" title=" Usuario-two editar perfil (completed)" width="0"/>
+                <img src="30faed6d1816fed316fadbe094537e817003d4937d0afc44894d9aa74447cf77.png" title=" When modifica su nombre de usuario a &quot;teste1&quot; y su nombre completo a &quot;&quot; (completed)" width="0"/>
+                <img src="30faed6d1816fed316fadbe094537e817003d4937d0afc44894d9aa74447cf77.png" title=" Then se muestra el mensaje de error" width="0"/>
+                <img src="30faed6d1816fed316fadbe094537e817003d4937d0afc44894d9aa74447cf77.png" title=" Then error profile visible should be (true)" width="0"/>
+                <img src="0f48419d748da5d0eda7986bead73828e90cf8fb02fc162b62b8adb23fb139ff.png" title=" Then error profile visible should be (true) (completed)" width="0"/>
+                <img src="0f48419d748da5d0eda7986bead73828e90cf8fb02fc162b62b8adb23fb139ff.png" title=" Then se muestra el mensaje de error (completed)" width="0"/>
+                <img src="0f48419d748da5d0eda7986bead73828e90cf8fb02fc162b62b8adb23fb139ff.png" title=" 3: Fallo en la actualizaci&oacute;n por datos inv&aacute;lidos ({username=teste1, fullname=}) (completed): <span class='success-color'>SUCCESS</span>" width="0"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.9.8</span>
+</div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Actualización de perfil de usuario" skipped="0" tests="4" time="252.46" timestamp="2025-12-02 02:34:49"><testcase name="Actualización exitosa del perfil con datos válidos"/><testcase name="Fallo en la actualización por datos inválidos"/></testsuite>

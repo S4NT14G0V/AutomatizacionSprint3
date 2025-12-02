@@ -41,8 +41,6 @@ bin/
 ### Mac OS ###
 .DS_Store
 
-target/
-
 src/temp/
 
 a.md
