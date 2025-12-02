@@ -5,11 +5,9 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import org.calidadsoftware.interactions.WriteOnMobile;
-import org.calidadsoftware.interfaces.LoginPage;
 import org.calidadsoftware.interfaces.ProfilePage;
 import org.calidadsoftware.models.UserProfileData;
 import org.calidadsoftware.utils.WaitFor;
-import org.openqa.selenium.WebElement;
 
 public class EditarPerfil implements Task {
 

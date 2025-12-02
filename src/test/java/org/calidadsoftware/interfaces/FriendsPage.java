@@ -1,6 +1,5 @@
 package org.calidadsoftware.interfaces;
 
-import io.appium.java_client.MobileBy;
 import net.serenitybdd.screenplay.targets.Target;
 
 public class FriendsPage {
@@ -33,6 +32,10 @@ public class FriendsPage {
     public static final Target BTN_ACCEPT_FRIEND =
             Target.the("botón agregar amigo")
                     .locatedBy("//android.view.ViewGroup[@content-desc=\"Accept\"]");
+
+    public static final Target BTN_REJECT_FRIEND =
+            Target.the("botón rechazar amigo")
+                    .locatedBy("//android.view.ViewGroup[@content-desc=\"Reject\"]");
 
     public static final Target BTN_REMOVE_FRIEND =
             Target.the("botón eliminar amigo")

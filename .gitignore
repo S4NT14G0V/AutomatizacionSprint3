@@ -46,3 +46,6 @@ target/
 src/temp/
 
 a.md
+
+*.apk
+

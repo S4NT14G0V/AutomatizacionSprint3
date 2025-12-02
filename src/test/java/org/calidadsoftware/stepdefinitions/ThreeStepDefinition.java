@@ -15,12 +15,12 @@ import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static org.hamcrest.Matchers.equalTo;
 
-public class CP008StepDefinition {
+public class ThreeStepDefinition {
 
     @Before
     public void setStage() {
         OnStage.setTheStage(new OnlineCast());
-        OnStage.theActorCalled("usuario-CP008");
+        OnStage.theActorCalled("usuario-three");
     }
 
     @Given("está en la pantalla de actividades")

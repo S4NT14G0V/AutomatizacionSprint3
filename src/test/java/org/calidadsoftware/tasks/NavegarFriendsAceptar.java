@@ -10,12 +10,12 @@ import org.calidadsoftware.interactions.ClickOn;
 import org.calidadsoftware.interfaces.BottomNavbarPage;
 import org.calidadsoftware.utils.WaitFor;
 
-public class NavegarFriends implements Task {
+public class NavegarFriendsAceptar implements Task {
 
-    public NavegarFriends() {}
+    public NavegarFriendsAceptar() {}
 
-    public static NavegarFriends go() {
-        return Tasks.instrumented(NavegarFriends.class);
+    public static NavegarFriendsAceptar go() {
+        return Tasks.instrumented(NavegarFriendsAceptar.class);
     }
 
     @Override
@@ -24,9 +24,13 @@ public class NavegarFriends implements Task {
         String username = Faker.instance().name().username();
         String fullname = Faker.instance().name().fullName();
         String password = "123456S$";
+        String receptorId = "692cc2cf73672d6a26b57ae6";
 
         // Registrar usuario falso
         String token = RegistrarUsuario.enBackend(email, fullname, username, password);
+
+        // Enviar solicitud al usuario logueado
+        EnviarSolicitud.enviar(token, receptorId);
 
         // Guardar datos del usuario falso para usarlos después en el flujo
         actor.remember("fakeEmail", email);

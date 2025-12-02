@@ -18,12 +18,12 @@ import org.calidadsoftware.tasks.NavegarProfile;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static org.hamcrest.Matchers.equalTo;
 
-public class CP001StepDefinition {
+public class OneStepDefinition {
 
     @Before
     public void setStage() {
         OnStage.setTheStage(new OnlineCast());
-        OnStage.theActorCalled("usuario");
+        OnStage.theActorCalled("usuario-one");
     }
 
     @Given("el usuario ha iniciado sesión")

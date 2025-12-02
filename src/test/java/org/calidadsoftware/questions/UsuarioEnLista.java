@@ -2,7 +2,6 @@ package org.calidadsoftware.questions;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
-import net.serenitybdd.screenplay.targets.Target;
 import net.serenitybdd.core.pages.WebElementFacade;
 import java.util.List;
 import org.calidadsoftware.interfaces.FriendsPage;

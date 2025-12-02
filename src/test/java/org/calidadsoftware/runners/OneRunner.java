@@ -6,9 +6,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features = "src/test/resources/features/CP004_GestionAmigos.feature",
-        glue = "org.calidadsoftware.stepdefinitions.CP004StepDefinition",
+        features = "src/test/resources/features/One_ActualizarUsuario.feature",
+        glue = "org.calidadsoftware.stepdefinitions",
         snippets = CucumberOptions.SnippetType.CAMELCASE
 )
-public class CP004Runner {
+public class OneRunner {
 }

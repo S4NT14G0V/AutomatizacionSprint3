@@ -34,6 +34,9 @@ dependencies {
     implementation 'org.slf4j:slf4j-simple:2.0.13'
     implementation("io.appium:java-client:8.5.1")
     testRuntimeOnly 'org.junit.vintage:junit-vintage-engine:5.10.0'
+    implementation 'com.github.javafaker:javafaker:1.0.2'
+    implementation 'org.yaml:snakeyaml:1.33'
+    implementation 'net.serenity-bdd:serenity-rest-assured:3.9.8'
 }
 
 application {
